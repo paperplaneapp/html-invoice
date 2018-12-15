@@ -1,2 +1,3 @@
-# html-invoice
-A simple HTML invoice template
+# HTML invoice template
+
+![Invoice thumbnail](preview.jpg)
