@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <style>
+        /* Colours */
+        :root {
+            --lightGrey: #ddd;
+            --midGrey: #666;
+            --darkGrey: #333;
+            --brightGreen: #6bff4f;
+        }
+
+        /* Layout */
+        .container {
+            width: 1000px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            font-size: 18px;
+        }
+
+        .payment-status {
+            align-self: center;
+            justify-self: end;
+        }
+
+        .payment-details {
+            justify-self: end;
+        }
+
+        /* Shared styles */
+        body {
+            font-family: Roboto;
+        }
+
+        table {
+            border-spacing: 0;
+        }
+
+        table th {
+            font-weight: normal;
+        }
+
+        .full-width {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        /* Element styles */
+        .logo {
+            letter-spacing: 0.075em;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            font-weight: 400;
+            margin: 2em 0;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        .contact-details {
+            text-align: right;
+        }
+
+        .contact-details p {
+            margin-top: 0;
+        }
+
+        .payment-status p {
+            background-color: var(--brightGreen);
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .note {
+            color: var(--darkGrey);
+            margin: 0 0 1em 0;
+        }
+
+        table.summary {
+            text-align: left;
+        }
+
+        table.summary td,
+        table.summary th {
+            padding: 1em;
+            border-bottom: 1px solid var(--lightGrey);
+        }
+
+        table.summary th {
+            color: var(--midGrey);
+        }
+
+        table.invoice {
+            margin: 4em 0;
+            border: 1px solid var(--midGrey);
+            border-radius: 5px;
+        }
+
+        table.invoice th,
+        table.invoice td {
+            padding: 1em;
+            text-align: left;
+        }
+
+        table.invoice thead th {
+            border-bottom: 1px solid var(--lightGrey);
+        }
+
+        table.invoice tr.total th {
+            text-align: right;
+            color: var(--midGrey);
+        }
+    </style>
+    <title>
+        Example Co Invoice 6187D8C-0002
+    </title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='logo'>
+            <img width="100%" src="example-logo.svg" />
+        </div>
+        <div class='contact-details'>
+            <p>
+                Questions about this invoice?
+            </p>
+            <p>
+                <a href='mailto:billing@example.com'>billing@example.com</a>
+            </p>
+            <p>
+                <a href='https://www.example.com'>www.example.com</a>
+            </p>
+        </div>
+        <h2>Invoice</h2>
+        <div class='payment-status'>
+            <p class='paid-stamp'>Paid</p>
+        </div>
+        <table class='invoice-details summary'>
+            <tr>
+                <th>Bill to</th>
+                <td>
+                    Enormocorp Inc
+                </td>
+            </tr>
+            <tr>
+                <th>Invoice number</th>
+                <td>
+                    6187D8C-0002
+                </td>
+            </tr>
+            <tr>
+                <th>Billed on</th>
+                <td>
+                    August 25th, 2018
+                </td>
+            </tr>
+            <tr>
+                <th>Due on</th>
+                <td>
+                    August 25th, 2018
+                </td>
+            </tr>
+        </table>
+        <div class='payment-details'>
+        </div>
+        <table class='full-width invoice'>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        August 25th, 2018 &mdash; September 25th, 2018
+                    </td>
+                    <td>
+                        1 × Subscription (at $50.00 / month)
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        $50.00
+                    </td>
+                </tr>
+                <tr class='total'>
+                    <th colspan='3'>Total</th>
+                    <td>
+                        $50.00
+                    </td>
+                </tr>
+                <tr class='total'>
+                    <th colspan='3'>Paid</th>
+                    <td>
+                        $50.00
+                    </td>
+                </tr>
+                <tr class='total'>
+                    <th colspan='3'>Amount due</th>
+                    <td>
+                        $0.00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class='full-width'>Notes</h3>
+        <p class='full-width note'>All amounts in United States Dollars (USD).</p>
+        <p class='full-width note'>Company registration number: 12345678</p>
+    </div>
+</body>
+
+</html>
